@@ -99,3 +99,14 @@
 .add-btn:hover {
   background: #4338ca;
 }
+
+.remove-btn{
+    background: red;
+}
+
+.remove-btn:hover{
+    background: rgb(116, 4, 4);
+}
+.clear{
+  margin-top: 10px;
+}
