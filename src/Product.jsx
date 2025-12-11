@@ -1,9 +1,18 @@
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import AddToCart from "./Cart";
 import { addItem, removeItem } from "./redux/slice";
+import { useEffect } from "react";
+import { fetchProduct } from "./redux/ProductSlice";
 const Product = () => {
 
   const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(fetchProduct())
+  },[])
+
+  const selector = useSelector((state)=>state.products.items)
+  console.log(selector);
+  
 
   return (
     <div className="card">
